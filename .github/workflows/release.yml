@@ -1,0 +1,21 @@
+name: release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    uses: compliance-framework/workflows/.github/workflows/release-go-image.yml@084cc5d5ee6a40455f84b4f3108cfb254654ae28
+    with:
+      images: >-
+        [{"name": "mock-agent", "dockerfile": "Dockerfile", "context": "."},
+         {"name": "mock-agent-ci", "dockerfile": "Dockerfile-ci", "context": "."},
+         {"name": "mock-agent-custodian", "dockerfile": "Dockerfile-custodian", "context": "."}]
+    permissions:
+      contents: read
+      packages: write
+    secrets: inherit
