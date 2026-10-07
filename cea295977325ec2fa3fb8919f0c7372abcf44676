@@ -1,0 +1,7 @@
+lisa-design:
+- Every shared-workflow ref and notify's workflows-ref is the full SHA 084cc5d5ee6a40455f84b4f3108cfb254654ae28 (head of workflows#12); keep them identical when re-pinning.
+- release-please-config.json copies defaults.json at that SHA verbatim (same formatting) plus packages {".": go}; the workflow warns on drift, so don't edit the shared keys locally.
+- Manifest seeded at 0.0.0 so the first feat after merge yields a 0.1.0 release PR (bump-minor-pre-major).
+- ci.yml pull_request types gain labeled/unlabeled, as README requires for release-checks (release:major-approved label read from the event).
+- Image list passes name/dockerfile/context explicitly for all three images, matching Dockerfile, Dockerfile-ci, Dockerfile-custodian.
+- mock-agent requires mock-api/mock-gooci at pseudo-versions, so its first release PR is expected to fail internal-deps-final until ccf-bump (stage 3) bumps them; intentional.
