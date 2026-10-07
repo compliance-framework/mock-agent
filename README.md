@@ -1,0 +1,3 @@
+# mock-agent
+
+Mock repo for developing CCF release automation. Not a product.
