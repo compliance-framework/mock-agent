@@ -14,7 +14,7 @@ import (
 func PackagePath(filename, module string) (string, error) {
 	m, err := ast.ParseModule(filename, module)
 	if err != nil {
-		return "", fmt.Errorf("parse rego module %s: %w", filename, err)
+		return "", fmt.Errorf("parse rego module: %w", err)
 	}
 	return m.Package.Path.String(), nil
 }
