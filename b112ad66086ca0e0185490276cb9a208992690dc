@@ -4,3 +4,9 @@ lisa-design:
 - runner.Plugin { Name() string } is the exported contract mock plugins import; keep its method set stable.
 - Every image (Dockerfile, Dockerfile-ci, Dockerfile-custodian) ships the static binary at /app/mock-agent (CGO_ENABLED=0); mock-agent-action copies it from there and fails its build without it. Bases: distroless static nonroot (main, ci) and scratch (custodian) instead of agent's debian-slim / c7n bases, since only the binary path matters for the release-workflow mock.
 - The builder stage is duplicated across the three Dockerfiles (as in agent) so each builds standalone with `docker build -f`; the Makefile owns the build flags.
+
+lisa-selfreview:
+pass 1 (strict):
+- [must-fix CORE-TEST-002] runner/plugin_test.go TestPluginInterface asserts its own fake; cannot fail -> fix: delete
+- [should-fix CORE-NAME-001] policy.Validate returns the package path -> fix: rename PackagePath
+- [should-fix GO-ERR-001] policy parse error returned bare -> fix: wrap with filename
