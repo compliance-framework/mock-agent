@@ -1,0 +1,5 @@
+lisa-design:
+- Shared workflows pinned to full SHA 87edd2b700d6dc6de8d49c1f44e525dd39e4db31 (head of compliance-framework/workflows#7), not @v1: this is a pre-release caller trial; repin to a tag once v1 exists.
+- notify passes workflows-ref equal to the pinned SHA because a reusable workflow cannot see the ref it was called at (workflows README).
+- Top-level permissions: {}; each job grants only what the workflows README documents (ci: actions/contents/pull-requests read + security-events write for nested osv-scanner; notify: actions/contents read).
+- make-targets: build only (the repo's Makefile build target); test is already covered by the shared go job (go test -race), docker-build is out of scope.
