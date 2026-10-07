@@ -1,0 +1,6 @@
+lisa-design:
+- mock-api and mock-gooci are required at their main pseudo-versions on purpose (spec: exercises the pseudo-version path); the release train replaces them with tagged releases later. Do not pin to tags here.
+- OPA is required at v1.14.1 to match the real agent (ccf-bump copies it into the mock policy repos). policy.Validate parses a Rego module via opa/v1/ast only so go mod tidy keeps the requirement.
+- runner.Plugin { Name() string } is the exported contract mock plugins import; keep its method set stable.
+- Every image (Dockerfile, Dockerfile-ci, Dockerfile-custodian) ships the static binary at /app/mock-agent (CGO_ENABLED=0); mock-agent-action copies it from there and fails its build without it. Bases: distroless static nonroot (main, ci) and scratch (custodian) instead of agent's debian-slim / c7n bases, since only the binary path matters for the release-workflow mock.
+- The builder stage is duplicated across the three Dockerfiles (as in agent) so each builds standalone with `docker build -f`; the Makefile owns the build flags.
