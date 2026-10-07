@@ -3,8 +3,8 @@ module github.com/compliance-framework/mock-agent
 go 1.26.1
 
 require (
-	github.com/compliance-framework/mock-api v0.0.0-20261007170302-d0c48b16df4b
-	github.com/compliance-framework/mock-gooci v0.0.0-20261007170424-df11b0f63211
+	github.com/compliance-framework/mock-api v0.1.0
+	github.com/compliance-framework/mock-gooci v0.1.0
 	github.com/open-policy-agent/opa v1.14.1
 )
 
