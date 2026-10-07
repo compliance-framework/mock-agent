@@ -6,3 +6,7 @@ self-review pass 1:
 
 lisa-design:
 - (supersedes the Validate name above) the OPA-referencing helper is policy.PackagePath(filename, module) (string, error).
+
+lisa-selfreview:
+pass 2 (strict):
+- [nit CORE-STYLE-001] policy.PackagePath wraps OPA errors with the filename, which OPA's error already starts with ("parse rego module x.rego: x.rego:0: ...") -> fix: drop filename from the wrap
