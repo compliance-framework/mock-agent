@@ -3,3 +3,6 @@ self-review pass 1:
 - CORE-TEST-002: deleted runner/plugin_test.go (asserted its own fake; runner is an interface with no behaviour)
 - CORE-NAME-001: policy.Validate renamed to policy.PackagePath (it returns the package path)
 - GO-ERR-001: PackagePath wraps the OPA parse error with the filename (%w)
+
+lisa-design:
+- (supersedes the Validate name above) the OPA-referencing helper is policy.PackagePath(filename, module) (string, error).
