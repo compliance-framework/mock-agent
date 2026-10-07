@@ -3,14 +3,18 @@
 // the requirement), pinned at the same version as the real agent.
 package policy
 
-import "github.com/open-policy-agent/opa/v1/ast"
+import (
+	"fmt"
 
-// Validate parses a Rego module and returns its package path, e.g.
-// "data.mock". It returns the parse error when the module is invalid.
-func Validate(filename, module string) (string, error) {
+	"github.com/open-policy-agent/opa/v1/ast"
+)
+
+// PackagePath parses a Rego module and returns its package path, e.g.
+// "data.mock". It returns an error when the module does not parse.
+func PackagePath(filename, module string) (string, error) {
 	m, err := ast.ParseModule(filename, module)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("parse rego module %s: %w", filename, err)
 	}
 	return m.Package.Path.String(), nil
 }
