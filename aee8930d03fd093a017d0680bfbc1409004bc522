@@ -1,3 +1,6 @@
 lisa-addressed:
 self-review pass 2:
 - CORE-STYLE-001: PackagePath error wrap no longer repeats the filename (OPA's error already carries it)
+
+lisa-selfreview:
+pass 3: approve, no findings (vet/test/gofmt clean; all three images build, /app/mock-agent is a static executable in each and mock-agent-action's Dockerfile builds against each)
