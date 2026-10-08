@@ -1,0 +1,2 @@
+lisa-design:
+- Only adds `closed` to pull_request types (plus one comment line); no pin changes. The shared workflows at v1.3.0 (ec58cea) already skip ci/required and release-checks on a closed PR, so the extra run only lets notify-failure mark the needs-human card handled and close the CI incident.
