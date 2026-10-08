@@ -1,7 +1,7 @@
 github.com/cespare/xxhash/v2 v2.3.0 h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
 github.com/cespare/xxhash/v2 v2.3.0/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
-github.com/compliance-framework/mock-api v0.1.0 h1:exvaJCHdqKcvhhP2tiYeuv3O+VI16rsKrbg3nEW3brU=
-github.com/compliance-framework/mock-api v0.1.0/go.mod h1:e+7zuVSl4ATQCsImdNiRLrr8kfexfQH1+1ekTBvtHvo=
+github.com/compliance-framework/mock-api v0.1.1 h1:QUz7ZeS8umRQm5GhjxqERaRMUPfktcfxEPqHogSj2hM=
+github.com/compliance-framework/mock-api v0.1.1/go.mod h1:e+7zuVSl4ATQCsImdNiRLrr8kfexfQH1+1ekTBvtHvo=
 github.com/compliance-framework/mock-gooci v0.1.0 h1:3jbe595pbB3vdtf+zQbybppymntOPkWqR+JMUIncDTI=
 github.com/compliance-framework/mock-gooci v0.1.0/go.mod h1:UgI7kHz8MinjqM37u1W/+2BIvPANmumgwu6tVcj2q7Y=
 github.com/decred/dcrd/dcrec/secp256k1/v4 v4.4.0 h1:NMZiJj8QnKe1LgsbDayM4UoHwbvwDRwnI3hwNaAHRnc=
