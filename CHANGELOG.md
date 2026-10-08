@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/compliance-framework/mock-agent/compare/v0.1.0...v0.1.1) (2026-10-08)
+
+
+### Bug Fixes
+
+* **deps:** bump mock-api to v0.1.1 ([#13](https://github.com/compliance-framework/mock-agent/issues/13)) ([c22e287](https://github.com/compliance-framework/mock-agent/commit/c22e2874847e0e92eac44372d735aac468907aa4))
+
 ## 0.1.0 (2026-10-07)
 
 
