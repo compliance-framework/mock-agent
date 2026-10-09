@@ -26,7 +26,7 @@ func run(w io.Writer, version string) error {
 
 func main() {
 	if err := run(os.Stdout, buildVersion); err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		fmt.Fprintf(os.Stderr, "mock-agent: %v\n", err)
 		os.Exit(1)
 	}
 }
