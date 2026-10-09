@@ -2,3 +2,6 @@ lisa-design:
 - rc-test change is the stderr error line in main(): "mock-agent: <err>". That path is untested, so no test changes are needed; run()'s stdout output (pinned by TestRun) is left alone on purpose.
 - cut-prerelease.yml is copied byte-for-byte from mock-api, keeping the pinned workflows SHA ec58cea (v1.3.0).
 - The fix: commit exists to open a release-please PR so cut-prerelease has a version to read for the rc test.
+
+lisa-selfreview:
+- pass 1 (core,go packs): approve, no findings. gofmt/vet/build/test green on go1.26.1. CORE-CI-001: caller pins workflows by full SHA with contents: read (same as mock-api). CORE-TEST-001 considered: the stderr prefix sits on main()'s untestable exit path; the spec forbids test changes for the rc-test, and TestRun's pinned stdout is unchanged.
