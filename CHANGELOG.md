@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/compliance-framework/mock-agent/compare/v0.1.1...v0.1.2) (2026-10-09)
+
+
+### Bug Fixes
+
+* prefix mock-agent's error output with the program name ([#19](https://github.com/compliance-framework/mock-agent/issues/19)) ([0f220d2](https://github.com/compliance-framework/mock-agent/commit/0f220d2449a647fb3740cef909c8be990291df5a))
+
 ## [0.1.1](https://github.com/compliance-framework/mock-agent/compare/v0.1.0...v0.1.1) (2026-10-08)
 
 
